@@ -1,0 +1,82 @@
+{
+    "_id": "recipe:apple-pie",
+    "title": "Apple Pie",
+    "servings": 8,
+    "calories_per_serving": 384,
+    "cook_time": 45,
+    "prep_time": 25,
+    "desc": "All American pie",
+    "ingredients": [
+        {
+            "name": "pie crusts",
+            "amount": {
+                "quantity": 2
+            }
+        },
+        {
+            "name": "granny smith apples",
+            "amount": {
+                "quantity": 6
+            }
+        },
+        {
+            "name": "granulated sugar",
+            "amount": {
+                "quantity": 0.75,
+                "unit": "cup"
+            }
+        },
+        {
+            "name": "cinnamon",
+            "amount": {
+                "quantity": 1,
+                "unit": "tbsp"
+            }
+        },
+        {
+            "name": "nutmeg",
+            "amount": {
+                "quantity": 1,
+                "unit": "tps"
+            }
+        },
+        {
+            "name": "lemon",
+            "amount": {
+                "quantity": 1
+            }
+        }
+    ],
+    "directions": [
+        "Preheat oven to 425 F",
+        "Put bottom crust in pan place in refrigerator",
+        "Peal, de-core and chop apple into 1/2 inch pieces (or slice into thin pieces)",
+        "Mix flour with sugar and spices",
+        "Mix apples with flour/spice/sugar and juice from lemon",
+        "Pour into pan with bottom crust and optionally slice pieces of button on top",
+        "Place top crust on top and pinch sides. Cut small slits into middle of top.",
+        "Cover edges with foil around top of crust and remove during last 20 minutes.",
+        "Bake 45 minutes."
+    ],
+    "likes": [
+        2,
+        1,
+        75
+    ],
+    "likes_count": 3,
+    "rating": [
+        5,
+        5,
+        5,
+        5,
+        1,
+        5,
+        5
+    ],
+    "rating_avg": 4.8,
+    "type": "Dessert",
+    "tags": [
+        "traditional",
+        "4th of July"
+    ]
+}

@@ -1,0 +1,648 @@
+[{
+  "_id": {
+    "$oid": "640a8843fcaa84c02f3398c1"
+  },
+  "level": 3,
+  "question": "What is sharding in MongoDB, and how does it work?",
+  "response": {
+    "short": "Sharding is the concept of breaking up the data in your collection across multiple different servers. It works by choosing a field to break up your data on, called a shard key. Using this key MongoDB will automatically break up and balance your data between different servers, which should be using Replica Sets.",
+    "reference": {
+      "chapter": 12,
+      "section": "Scaling with Sharding"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067477f"
+  },
+  "level": 1,
+  "question": "Can you explain the difference between a MongoDB document and a collection?",
+  "response": {
+    "short": "A document is a single unit of data storage within a collection, while a collection is a grouping of documents that share a similar structure and are stored together.",
+    "reference": {
+      "chapter": 9,
+      "section": "Collection Settings and Types"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674780"
+  },
+  "level": 2,
+  "question": "What is a MongoDB Replica Set?",
+  "response": {
+    "short": "In MongoDB a Replica Set is a way to achieve database replication by maintaining multiple copies of the data in your MongoDB instance between multiple separate instances of MongoDB. There is a primary instance, and multiple secondary instances. Each instance will have a copy of all the data in the other instances so that if the primary instance goes down one of the secondaries can take over, with little or no downtime.",
+    "reference": {
+      "chapter": 12,
+      "section": "Reducing Risk with Replication"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674781"
+  },
+  "level": 2,
+  "question": "How do you optimize MongoDB performance?",
+  "response": {
+    "short": "There are many ways to optimize MonogDB performance, the most common is analyzing the usage of indexes. Use tools like .explain() and other performance monitoring tools to ensure you have proper indexes to match common, or slower running queries. In some cases sharding your data can also help with performance.",
+    "reference": {
+      "chapter": 9,
+      "section": "Indexing Collections"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674782"
+  },
+  "level": 2,
+  "question": "Can you explain the concept of indexes?",
+  "response": {
+    "short": "An index is a data structure that improves the speed of data retrieval operations on a collection. When a query is executed, MongoDB can use an index to quickly locate the documents that match the query criteria, rather than scanning through the entire collection.",
+    "reference": {
+      "chapter": 9,
+      "section": "Indexing collections"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674783"
+  },
+  "level": 3,
+  "question": "How do you back up and restore MongoDB data?",
+  "response": {
+    "short": "There are many ways to backup and restore MongoDB data. The simplest is simply backing up the folder on disk with the database files, however more than likely you will want to use a tool like mongodump or mongoexport along with mongorestore or mongoimport. You can use those tools, along with custom scripts to backup databases and collections on a regular schedule as well restore from backups.",
+    "reference": {
+      "chapter": 13,
+      "section": "Backup Strategies"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674785"
+  },
+  "level": 3,
+  "question": "Can you explain the role of the primary node in a replica set?",
+  "response": {
+    "short": "The primary node in a replica set is responsible for all write operations and manages all client connections to the replica set. It replicates all its data and any changes to the secondary nodes in the replica set.",
+    "reference": {
+      "chapter": 12,
+      "section": "Replica Sets"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674786"
+  },
+  "level": 2,
+  "question": "What are the various data types supported by MongoDB?",
+  "response": {
+    "short": "MongoDB's BSON format supports many common data types, such as string, integer, boolean, null, as well as more JSON like types such as arrays and objects. Other data types include decimal, dates, ObjectId, regular expressions and javascript code.",
+    "reference": {
+      "chapter": 4,
+      "section": "More About Types"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674787"
+  },
+  "level": 2,
+  "question": "Can you explain aggregation?",
+  "response": {
+    "short": "Aggregation allow you to perform complex data processing tasks, such as filtering, grouping, sorting, and summarizing data using a set of stages. There are many stages available in the MongoDB aggregation pipeline, such as $match, $group, $sort, $limit, $skip, $project, $lookup, and more. You can use these stages in different combinations to perform complex data processing tasks.",
+    "reference": {
+      "chapter": 8,
+      "section": "Typical Aggregation Pipelines"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674789"
+  },
+  "level": 3,
+  "question": "What is the role of a secondary node in a replica set?",
+  "response": {
+    "short": "The role of a secondary node is to maintain a copy of the primary's data, and if configured to so, vote in elections to elect a new primary and take over a primary, if elected. ",
+    "reference": {
+      "chapter": 12,
+      "section": "Replica Sets"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067478a"
+  },
+  "level": 1,
+  "question": "Can you explain the difference between a document-oriented database and a relational database?",
+  "response": {
+    "short": "A document-oriented database is a type of NoSQL database that stores data in a flexible, document-like format, such as JSON or BSON, and does not require a fixed schema. A relational database stores data in tables with fixed columns and rows, and enforces a strict schema. In a document database you will usually store related data together in a document, where as in a relational database you will store the data in separate tables and join them together based on their relationships.",
+    "reference": {
+      "chapter": 1,
+      "section": "Relational Databases vs Document Databases"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067478b"
+  },
+  "level": 2,
+  "question": "What is a capped collection?",
+  "response": {
+    "short": "A capped collection is a special collection type that will only ever have a certain number of documents at a time, or to be constrained by a set size on disk. You set these limits when you create the collection. The oldest documents in the collection will be continually and automatically deleted to keep the collection capped at the size set.",
+    "reference": {
+      "chapter": 9,
+      "section": "Capped Collections"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067478d"
+  },
+  "level": 3,
+  "question": "How would you handle failover in MongoDB?",
+  "response": {
+    "short": "To handle failover in MongoDB, you can set up a replica set with multiple nodes, where one node is designated as the primary and the others as secondaries. If the primary node fails, one of the secondaries will be automatically elected as the new primary, and the application can continue to operate without interruption. You can also manually handle failover by using the rs.stepDown() command and/or changing the priority of nodes.",
+    "reference": {
+      "chapter": 12,
+      "section": "Changing a Primary to a Secondary"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067478e"
+  },
+  "level": 3,
+  "question": "What is the difference between a replica set and a sharded cluster?",
+  "response": {
+    "short": "A Replica Set has members which each have a copy of the primary server's data. A Shared Cluster has data broken up between different replica sets, so no one replica set has a full copy of the server's data, but rather the slice, or shard of the data they are responsible for storing. These slices are automatically balanced by MongoDB based on a shard key.",
+    "reference": {
+      "chapter": 12,
+      "section": "Scaling with Sharding"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067478f"
+  },
+  "level": 3,
+  "question": "How do you implement role-based access control in MongoDB?",
+  "response": {
+    "short": "You can implement role-based access control by setting the authentication and authorization settings in your MongoDB config file or by using the --auth option. You will also need to create an administrator user account. After that you can create more users using createUser(), create and define roles using createRole() and lastly, use grantRolesToUser() to assign roles.",
+    "reference": {
+      "chapter": 13,
+      "section": "Enabling Access Control"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674790"
+  },
+  "level": 2,
+  "question": "How would you handle data archiving in MongoDB?",
+  "response": {
+    "short": "You can use tools like mongoexport to achieve data archiving, or you could use the aggregation framework's $merge or $out stages to move documents to a another collection based off a query or other stages.",
+    "reference": {
+      "chapter": 10,
+      "section": "Transferring via the Aggregation Framework"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674792"
+  },
+  "level": 3,
+  "question": "Can you explain the role of a replica set arbiter in MongoDB?",
+  "response": {
+    "short": "The role of a replica set arbiter in MongoDB is to facilitate the election of a primary node in the event of a network partition or the failure of one of the nodes. The arbiter does not store any data, and its sole purpose is to participate in the election process by casting a tie-breaking vote if necessary.",
+    "reference": {
+      "chapter": 12,
+      "section": "Arbiters"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674793"
+  },
+  "level": 3,
+  "question": "Can you explain the concept of document validation in MongoDB?",
+  "response": {
+    "short": "Schema validation enforces a schema on all documents inserted into the collection. For example you can force a field to only ever be a number, or string, or required. You can provide a $jsonSchema object to the validator option when you create your collection to configure the collection's schema.",
+    "reference": {
+      "chapter": 9,
+      "section": "Document Schema Validation"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674795"
+  },
+  "level": 3,
+  "question": "How do you monitor MongoDB performance?",
+  "response": {
+    "short": "You can use commands like db.serverStatus() or db.dbStats() in the MongoDB shell to monitor database metrics like memory, CPU, and network usage. Additionally, the mongostat command line tool can be used to monitor various performance metrics of a MongoDB server in real-time.",
+    "reference": {
+      "chapter": 11,
+      "section": "Monitoring MongoDB"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674796"
+  },
+  "level": 3,
+  "question": "What is the `oplog` in MongoDB?",
+  "response": {
+    "short": "The 'oplog' in MongoDB is a special system collection that records all the write operations that occur on a MongoDB server in chronological order. The oplog is used in MongoDB's replication and sharding features to ensure that all replica set members or shards have the same data as the primary member or shard. ",
+    "reference": {
+      "chapter": 12,
+      "section": "The oplog Collection"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674797"
+  },
+  "level": 1,
+  "question": "How do you handle schema design with MongoDB?",
+  "response": {
+    "short": "To handle schema design with MongoDB, it's important to understand your data and its relationships and denormalize your data where appropriate by storing data that goes together in the same document. Choose appropriate data types for your fields, such as strings for text, numbers for numerical data, and dates for time-related data.",
+    "reference": {
+      "chapter": 4,
+      "section": "What is a Document?"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674798"
+  },
+  "level": 3,
+  "question": "Can you explain the difference between a primary key and a shard key in MongoDB?",
+  "response": {
+    "short": "A primary key is a unique identifier for each document in a collection, while a shard key is a field or set of fields that is used to break up data across multiple shards in a sharded cluster.",
+    "reference": {
+      "chapter": 12,
+      "section": "Sharding Data and Shard Keys"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb7150674799"
+  },
+  "level": 3,
+  "question": "Can you explain the difference between a horizontal and vertical scaling using MongoDB?",
+  "response": {
+    "short": "Vertical scaling involves adding or upgrading to more resources to a single server, like CPU, RAM or disk. Horizontal scaling involves adding more servers or nodes to distribute the load across multiple servers.",
+    "reference": {
+      "chapter": 12
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067479a"
+  },
+  "level": 3,
+  "question": "How can you ensure data security with MongoDB?",
+  "response": {
+    "short": "Data security with MongoDB can be ensured through various mechanisms such as authentication, authorization, encryption, auditing, and following best practices for database security.",
+    "reference": {
+      "chapter": 13
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067479b"
+  },
+  "level": 1,
+  "question": "Can you explain the difference between a BSON document and a JSON document?",
+  "response": {
+    "short": "BSON and JSON are both formats for representing data in a human-readable and machine-readable way, but BSON is a binary format while JSON is a text-based format. BSON supports additional data types, such as binary data and date objects, and is designed for efficient storage and manipulation of data in MongoDB.",
+    "reference": {
+      "chapter": 4,
+      "section": "What is a Document?"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb715067479f"
+  },
+  "level": 1,
+  "question": "Can you explain the concept of document embedding, or subdocuments, in MongoDB?",
+  "response": {
+    "short": "Document embedding is a way of storing related data within a single document, instead of splitting it across multiple collections or databases. This reduces the need for complex joins and improves read performance, at the cost of potentially increased write complexity and document size.",
+    "reference": {
+      "chapter": 4
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a1"
+  },
+  "level": 3,
+  "question": "Can you explain the concept of a Read Preference in MongoDB?",
+  "response": {
+    "short": "Read preference refers to the strategy used to determine which member in a replica set should be used for read operations. It can be specified as an option when performing read operations such as a find() query to determines how a replica set should distribute read operations across the members in the replica set. This includes options like Primary, Secondary, PrimaryPreferred, SecondaryPreferred and Nearest.",
+    "reference": {
+      "chapter": 12,
+      "section": "Fail-safes"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a3"
+  },
+  "level": 1,
+  "question": "What is the difference between an index and a collection?",
+  "response": {
+    "short": "A collection is the way MongoDB stores documents together, it is a little bit like a table in a relational database with the key difference being not all the documents in a collection need to have the same structure, or schema. An index is a data structure that improves the speed of queries by allowing the database to quickly locate and retrieve documents in a collection based on the values of one or more fields.",
+    "reference": {
+      "chapter": 9
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a4"
+  },
+  "level": 2,
+  "question": "What is the difference between a single-field index and a compound index in MongoDB?",
+  "response": {
+    "short": "A single-field index is an index on one particular field of the documents in a collection, while a compound index is an index on multiple fields of the documents. Single-field indexes can be used to optimize queries that filter or sort on a single field, while compound indexes optimize queries which perform operations on multiple fields within a query.",
+    "reference": {
+      "chapter": 9,
+      "section": "Indexing Collections"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a5"
+  },
+  "level": 3,
+  "question": "Can you explain the use of the `$group` operator?",
+  "response": {
+    "short": "The $group operator is used to group documents in a collection based on a specified set of fields, and then perform aggregate functions on the grouped data. The $group operator takes an aggregation pipeline stage, and is typically used in conjunction with other pipeline stages such as $match, $project, and $sort. It can also take one or more accumulator expressions, which are used to perform aggregate functions on the grouped data. Some examples of accumulator expressions are $sum, $avg, $min, $max, and $push. The result of the $group operator is a new collection that contains the grouped and aggregated data, which can then be further processed or analyzed as needed.",
+    "reference": {
+      "chapter": 8,
+      "section": "Grouping and Sorting Stages"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a6"
+  },
+  "level": 3,
+  "question": "How do you handle query optimization in MongoDB?",
+  "response": {
+    "short": "To optimize queries in MongoDB, you can use the explain() method to get information about how a query is executed and identify potential performance issues. You can also create indexes on fields that are frequently used in queries or use the aggregation pipeline to optimize complex queries.",
+    "reference": {
+      "chapter": 9,
+      "section": "Query Plans"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747a8"
+  },
+  "level": 2,
+  "question": "Can you explain the use of the `$push` operator?",
+  "response": {
+    "short": "The $push operator adds one or more elements to an array field within a document, or to create a new array field if it does not already exist. The $push operator is often used with other operators, such as $each, $position, or $slice to modify exactly how elements are added to the array.",
+    "reference": {
+      "chapter": 7,
+      "section": "Adding Array Items"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747aa"
+  },
+  "level": 1,
+  "question": "What is the difference between a cursor and a result set?",
+  "response": {
+    "short": "A result set is the complete set of data that matches a query, returned to the client. A cursor is a pointer to the result set on the server, that allows you to retrieve and process the data in smaller, manageable chunks.",
+    "reference": {
+      "chapter": 6,
+      "section": "Querying MongoDB"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747ac"
+  },
+  "level": 2,
+  "question": "What is the difference between the `$in` and `$nin` operators?",
+  "response": {
+    "short": "The $in operator selects documents where the field matches any value in a provided array, while the $nin operator selects documents where the field does not match any value in the provided array.",
+    "reference": {
+      "chapter": 6,
+      "section": "Comparison Operators"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747ad"
+  },
+  "level": 2,
+  "question": "Can you explain the use of the $regex operator?",
+  "response": {
+    "short": "The $regex query operator is used to search for documents that match a specific pattern or regular expression. It can be used in queries to find data that matches a certain string pattern, allowing for more flexible and powerful searches including case-insensitive searches.",
+    "reference": {
+      "chapter": 6,
+      "section": "Using Regex Queries"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747ae"
+  },
+  "level": 2,
+  "question": "What is the difference between a TTL index and a capped collection?",
+  "response": {
+    "short": "A Time To Live (TTL) index is linked to a specific date field in a document and an expire date (in seconds). When the expire date is met on the date field that document will be deleted. In a capped collection there is a limit for the size on disk, and optionally a count of documents. When either the size or the count of documents is exceeded the oldest documents will be deleted from the collection.",
+    "reference": {
+      "chapter": 9,
+      "section": "Capped Collections"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747af"
+  },
+  "level": 2,
+  "question": "What is the difference between the $and and $or operators in MongoDB?",
+  "response": {
+    "short": "The $and operator performs a logical 'AND' operation between two or more fields and returns the documents that match. The $or operator performs a logical 'OR' operation and returns the documents that match at least one of the expressions. So, the $and operator requires all the conditions to be met while the $or operator requires at least one of the conditions to be met.",
+    "reference": {
+      "chapter": 6,
+      "section": "Logical Operators"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747b0"
+  },
+  "level": 2,
+  "question": "What is the difference between the $all and $elemMatch operators?",
+  "response": {
+    "short": "The $all operator requires an exact match of all the elements in a specified list, while the $elemMatch operator only requires a match of at least one element in the array that meets the specified condition.",
+    "reference": {
+      "chapter": 7,
+      "section": "Matching Multiple Array Values"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747b1"
+  },
+  "level": 2,
+  "question": "When using the $push operator, what is the difference between $slice and $position?",
+  "response": {
+    "short": "The $slice operator limits the number of elements that can be inserted into an array, which you can use to limit an array to a certain size. The $position operator specifies the location in the array where the new element should be inserted.",
+    "reference": {
+      "chapter": 7,
+      "section": "Removing Array Items"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747b2"
+  },
+  "level": 2,
+  "question": "What is the difference between the $and and $nor operators?",
+  "response": {
+    "short": "The $and operator in MongoDB performs a logical 'AND' operation where as the $nor operator performs a logical 'NOR' operation meaning it returns the documents that do not match any of the expressions. In short, the $and operator requires all conditions to be met while the $nor operator requires that none of the conditions are met.",
+    "reference": {
+      "chapter": 6,
+      "section": "Logical Operators"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "64192b927b7fbb71506747b3"
+  },
+  "level": 2,
+  "question": "What is the difference between the $pull and $pop operators?",
+  "response": {
+    "short": "The $pull operator removes all instances of a value from an array in a document, based on a query. The $pop operator removes the first (or last) element from an array a document.",
+    "reference": {
+      "chapter": 7,
+      "section": "Removing Array Items"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "641f8afe7b7fbb71506747b5"
+  },
+  "level": 1,
+  "question": "What is the difference between the findOne() and find() methods?",
+  "response": {
+    "short": "The findOne() method returns the first document that matches the specified query, while the find() method returns a cursor with all the documents that match the query criteria. The find() method can be used with additional methods like sort(), limit(), and skip() to control the number and order of documents returned.",
+    "reference": {
+      "chapter": 5,
+      "section": "View Our New Document"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "641f8afe7b7fbb71506747b6"
+  },
+  "level": 1,
+  "question": "How do you add or remove fields in a document?",
+  "response": {
+    "short": "To add a new field to a document in MongoDB, you can use the updateOne() or updateMany() method with the $set operator. To remove a field from a document, you can use the $unset operator.",
+    "reference": {
+      "chapter": 5,
+      "section": "Updating Documents"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "641f8c8e7b7fbb71506747b8"
+  },
+  "question": "How can you configure and extend the MongoDB Shell, monogosh?",
+  "level": 3,
+  "response": {
+    "short": "You can extend the shell in a number of ways including configuring and adding custom configuration and code to your mongoshrc file. There you can configure things like your prompt, custom functions and even node.js code and imports.",
+    "reference": {
+      "chapter": 15,
+      "section": "MongoDB Shell"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f308"
+  },
+  "level": 1,
+  "question": "How would you query for a document with a field named title, with the value Tacos?",
+  "response": {
+    "short": "You would construct a query like this: `db.collection.find({ 'title': 'Tacos' })` note the 'Tacos' is capsized. A query for 'tacos' would not match since MongoDB is case-sensitive.",
+    "reference": {
+      "chapter": 6,
+      "section": "The MongoDB Query API"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f30c"
+  },
+  "level": 1,
+  "question": "Does the casing of text matter in a query?",
+  "response": {
+    "short": "Yes. For strings MongoDB is case sensitive, which means a search for 'Dr. Pepper' is not the same as 'dr. pepper' or 'DR. Pepper'. There are ways around this such as using $regex queries or storing your data with search or shadow fields, or using aggregation queries.",
+    "reference": {
+      "chapter": 6,
+      "section": "Query Case Sensitivity"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f309"
+  },
+  "level": 1,
+  "question": "What is the 'projection' or 'project' part of a query?",
+  "response": {
+    "short": "When querying a collection, you can specify a projection document as the second argument to the find() method. The projection document contains a list of field names that should be included or excluded from the result set. For example, if you wanted to query for document with the title 'Tacos' and only return that field you would write a query like: `db.collection.find({ 'title': 'Tacos' }, { title: 1, _id: 0 })`. This is to show the title field, and exclude the _id, which is otherwise already returned.",
+    "reference": {
+      "chapter": 6,
+      "section": "Using Projection to Control Output"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f30a"
+  },
+  "number": 31,
+  "level": 2,
+  "question": "What is the difference between the `mongodump` command and the `mongoexport` command?",
+  "response": {
+    "short": "The mongodump and mongoexport commands are both used for exporting data from a MongoDB database, but they differ in the format of the exported data. mongodump creates a binary backup of the entire database or a specific collection in a binary BSON format, which can be used to restore the data to another MongoDB instance using the mongorestore command. mongoexport exports data from a MongoDB collection in JSON, CSV, or TSV format. This command is typically used to export data for use in other applications or systems that do not use MongoDB. Unlike mongodump, mongoexport only exports the data from a single collection at a time and does not include indexes or other metadata.",
+    "reference": {
+      "chapter": 10,
+      "section": "Using Database Export Tools"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f30b"
+  },
+  "level": 2,
+  "question": "How can you tell if you are on the primary node of a Replica Set?",
+  "response": {
+    "short": "If you are connected via the MongoDB shell this will generally be in your shell prompt with something like :PRIMARY> or :SECONDARY>, or you can use the `rs.status()` or `rs.hello()` commands and look for `primary` information in the output.",
+    "reference": {
+      "chapter": 12,
+      "section": "Changing a Primary to a Secondary"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6426617095833023ecf6f30d"
+  },
+  "level": 1,
+  "question": "In a document, what is an ObjectId?",
+  "response": {
+    "short": "In MongoDB, ObjectId is a built-in data type that represents a unique identifier for a document in a collection. It is a 12-byte value consisting of a 4-byte timestamp, a 5-byte random value, and a 3-byte incrementing counter. By default, MongoDB will assign an ObjectId to the documents _id.",
+    "reference": {
+      "chapter": 4,
+      "section": "Document Structure"
+    }
+  }
+}]

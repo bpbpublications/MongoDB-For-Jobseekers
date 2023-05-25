@@ -1,0 +1,229 @@
+[{
+  "_id": {
+    "$oid": "633a07684a5db24108dee9fa"
+  },
+  "address": {
+    "street": "321 Minor Street",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "80921"
+  },
+  "total_size": {
+    "sqft": 2100,
+    "m2": 195
+  },
+  "bathroom_count": 3.25,
+  "bedroom_count": 4,
+  "bedrooms": [
+    {
+      "name": "Office / Bedroom",
+      "size": {
+        "sqft": 150,
+        "m2": 14
+      }
+    },
+    {
+      "name": "Bedroom",
+      "size": {
+        "sqft": 165,
+        "m2": 15.329
+      }
+    },
+    {
+      "name": "Bedroom",
+      "size": {
+        "sqft": 165,
+        "m2": 15.329
+      }
+    },
+    {
+      "name": "Main Bedroom",
+      "size": {
+        "sqft": 180,
+        "m2": 16.7
+      }
+    }
+  ],
+  "levels": 3,
+  "asking_price": 729000,
+  "price_history": [
+    {
+      "date": {
+        "$date": {
+          "$numberLong": "1567296000000"
+        }
+      },
+      "price": 536000
+    },
+    {
+      "date": {
+        "$date": {
+          "$numberLong": "1336176000000"
+        }
+      },
+      "price": 387000
+    },
+    {
+      "date": {
+        "$date": {
+          "$numberLong": "635731200000"
+        }
+      },
+      "price": 250000
+    }
+  ],
+  "heating": "Forced Air",
+  "cooling": null
+},{
+  "_id": {
+    "$oid": "633a60954a5db24108dee9fb"
+  },
+  "symbol": "STOCK",
+  "volume": 1400000,
+  "high": 23.01,
+  "low": 19.95,
+  "close": 22.01,
+  "quotes": [
+    {
+      "price": 20.32,
+      "date": {
+        "$date": {
+          "$numberLong": "1667307600000"
+        }
+      }
+    },
+    {
+      "price": 19.95,
+      "date": {
+        "$date": {
+          "$numberLong": "1667311200000"
+        }
+      }
+    },
+    {
+      "price": 21.13,
+      "date": {
+        "$date": {
+          "$numberLong": "1667314800000"
+        }
+      }
+    },
+    {
+      "price": 23.77,
+      "date": {
+        "$date": {
+          "$numberLong": "1667318400000"
+        }
+      }
+    },
+    {
+      "price": 22.01,
+      "date": {
+        "$date": {
+          "$numberLong": "1667322000000"
+        }
+      }
+    }
+  ]
+},{
+  "_id": "recipe:apple-pie",
+  "title": "Apple Pie",
+  "servings": 8,
+  "calories_per_serving": 384,
+  "cook_time": 45,
+  "prep_time": 25,
+  "desc": "All American pie",
+  "ingredients": [
+    {
+      "name": "pie crusts",
+      "amount": {
+        "quantity": 2
+      }
+    },
+    {
+      "name": "granny smith apples",
+      "amount": {
+        "quantity": 6
+      }
+    },
+    {
+      "name": "granulated sugar",
+      "amount": {
+        "quantity": 0.75,
+        "unit": "cup"
+      }
+    },
+    {
+      "name": "cinnamon",
+      "amount": {
+        "quantity": 1,
+        "unit": "tbsp"
+      }
+    },
+    {
+      "name": "nutmeg",
+      "amount": {
+        "quantity": 1,
+        "unit": "tps"
+      }
+    },
+    {
+      "name": "lemon",
+      "amount": {
+        "quantity": 1
+      }
+    }
+  ],
+  "directions": [
+    "Preheat oven to 425 F",
+    "Put bottom crust in pan place in refrigerator",
+    "Peal, de-core and chop apple into 1/2 inch pieces (or slice into thin pieces)",
+    "Mix flour with sugar and spices",
+    "Mix apples with flour/spice/sugar and juice from lemon",
+    "Pour into pan with bottom crust and optionally slice pieces of button on top",
+    "Place top crust on top and pinch sides. Cut small slits into middle of top.",
+    "Cover edges with foil around top of crust and remove during last 20 minutes.",
+    "Bake 45 minutes."
+  ],
+  "likes": [
+    2,
+    1,
+    75
+  ],
+  "likes_count": 3,
+  "rating": [
+    5,
+    5,
+    5,
+    5,
+    1,
+    5,
+    5
+  ],
+  "rating_avg": 4.8,
+  "type": "Dessert",
+  "tags": [
+    "traditional",
+    "4th of July"
+  ]
+},{
+  "_id": {
+    "$oid": "633b7b644a5db24108dee9fc"
+  },
+  "user_id": 2,
+  "first_name": "Grace",
+  "last_name": "Hopper",
+  "title": "Rear Admiral",
+  "email": "grace.hopper@navy.mil",
+  "password": "Qzh3NCZ4V0;eZWd3Zdla!c5Y2h3Zg",
+  "address": {
+    "street": "321 Minor Street",
+    "city": "Seattle",
+    "state": "WA",
+    "zip": "80921"
+  },
+  "recipe_favorites": [
+    "recipe:apple-pie",
+    "recipe:chicken-tacos"
+  ]
+}]

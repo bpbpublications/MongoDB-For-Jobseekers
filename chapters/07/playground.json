@@ -1,0 +1,167 @@
+[{
+  "_id": 1,
+  "title": "Split Pea Soup",
+  "calories_per_serving": 158,
+  "prep_time": 10,
+  "cook_time": 300,
+  "ingredients": [
+    {
+      "name": "peas",
+      "quantity": {
+        "amount": 1,
+        "unit": "cup"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "water",
+      "quantity": {
+        "amount": 8,
+        "unit": "cup"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "milk",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "flour",
+      "quantity": {
+        "amount": 3,
+        "unit": "tablespoon"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "butter",
+      "quantity": {
+        "amount": 2,
+        "unit": "cup"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "salt",
+      "quantity": {
+        "amount": 1,
+        "unit": "teaspoon"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "pepper",
+      "quantity": {
+        "amount": {
+          "$numberDecimal": "0.25"
+        },
+        "unit": "teaspoon"
+      }
+    },
+    {
+      "name": "onion",
+      "quantity": {
+        "amount": 1
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "ham hock",
+      "quantity": 1,
+      "vegetarian": false,
+      "optional": true
+    }
+  ],
+  "directions": [
+    "Pick over and wash the vegetable and soak several hours or overnight.",
+    "Drain and add measured water and small onion, with ham hock if desired.",
+    "Cook gently 5 or 6 hours until liquid is reduced one half.",
+    "Remove ham hock and rub vegetable through a strainer to remove skins.",
+    "Melt butter, add flour and enough stock to make mixture thin enough to pour.",
+    "Add to rest of stock, stir until it boils, season, and serve.",
+    "Milk may be added or not.",
+    "If used, it may be mixed with butter and flour as for white sauce.",
+    "If too thick, soup may be thinned with milk or water, and water must be added if it boils away."
+  ],
+  "rating": [
+    4,
+    4,
+    4,
+    4,
+    2,
+    5,
+    3
+  ],
+  "rating_avg": 3.71,
+  "servings": 6,
+  "tags": [
+    "soup",
+    "easy",
+    "peas",
+    "vegetarian"
+  ],
+  "type": "Dinner",
+  "vegetarian_option": true
+},{
+  "_id": 2,
+  "title": "Toast",
+  "calories_per_serving": 75,
+  "prep_time": 1,
+  "cook_time": 4,
+  "ingredients": [
+    {
+      "name": "bread",
+      "quantity": {
+        "amount": 4,
+        "unit": "slice"
+      },
+      "vegetarian": true
+    },
+    {
+      "name": "butter",
+      "quantity": {
+        "amount": 2,
+        "unit": "tablespoon"
+      },
+      "vegetarian": true
+    }
+  ],
+  "directions": [
+    "Toast bread.",
+    "When both sides are an even golden brown, butter one side, care being taken to butter the edges.",
+    "Melt butter.",
+    "Serve hot."
+  ],
+  "rating": [
+    5
+  ],
+  "rating_avg": 5,
+  "servings": 4,
+  "tags": [
+    "bread",
+    "quick",
+    "vegetarian"
+  ],
+  "type": "Breakfast",
+  "vegetarian_option": true
+},{
+  "_id": 3,
+  "title": "Blue Cheese Burgers",
+  "type": "Dinner",
+  "tags": [
+    "free",
+    [
+      "free"
+    ],
+    [
+      "1",
+      "2"
+    ],
+    "1",
+    "2"
+  ]
+}]

@@ -1,0 +1,19 @@
+[
+    {
+        "$addFields": {
+            "search_title": {
+                "$toLower": "$title"
+            }
+        }
+    },
+    {
+        "$match": {
+            "search_title": "toast"
+        }
+    },
+    {
+        "$project": {
+            "title": 1
+        }
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "_id": {
+        "$oid": "633b7b644a5db24108dee9fc"
+    },
+    "user_id": 2,
+    "first_name": "Grace",
+    "last_name": "Hopper",
+    "title": "Rear Admiral",
+    "email": "grace.hopper@navy.mil",
+    "password": "Qzh3NCZ4V0;eZWd3Zdla!c5Y2h3Zg",
+    "address": {
+        "street": "321 Minor Street",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "80921"
+    },
+    "recipe_favorites": [
+        "recipe:apple-pie",
+        "recipe:chicken-tacos"
+    ]
+}
