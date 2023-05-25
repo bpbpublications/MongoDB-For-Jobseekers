@@ -1,0 +1,20 @@
+[
+  {
+    "_id": {
+      "$oid": "63b22823e1fc395f0e1e134d"
+    },
+    "title": "Document 1"
+  },
+  {
+    "_id": {
+      "$oid": "63b22838e1fc395f0e1e134e"
+    },
+    "title": "Document 2"
+  },
+  {
+    "_id": {
+      "$oid": "63b22840e1fc395f0e1e134f"
+    },
+    "title": "Document 3"
+  }
+]

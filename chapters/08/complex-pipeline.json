@@ -1,0 +1,44 @@
+[
+  {
+    "$match": {
+      "rating": {
+        "$exists": true
+      }
+    }
+  },
+  {
+    "$project": {
+      "type": 1,
+      "avgRatingRecipe": {
+        "$avg": "$rating"
+      }
+    }
+  },
+  {
+    "$group": {
+      "_id": "$type",
+      "recipeCount": {
+        "$count": {}
+      },
+      "avgRatingType": {
+        "$avg": "$avgRatingRecipe"
+      }
+    }
+  },
+  {
+    "$project": {
+      "avgRating": {
+        "$round": [
+          "$avgRatingType",
+          2
+        ]
+      },
+      "recipeCount": 1
+    }
+  },
+  {
+    "$sort": {
+      "_id": 1
+    }
+  }
+]

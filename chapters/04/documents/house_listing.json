@@ -1,0 +1,71 @@
+{
+    "_id": {
+        "$oid": "633a07684a5db24108dee9fa"
+    },
+    "address": {
+        "street": "321 Minor Street",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "80921"
+    },
+    "total_size": {
+        "sqft": 2100,
+        "m2": 195
+    },
+    "bathroom_count": 3.25,
+    "bedroom_count": 4,
+    "bedrooms": [
+        {
+            "size": {
+                "sqft": 150,
+                "m2": 14
+            },
+            "name": "Office / Bedroom"
+        },
+        {
+            "size": {
+                "sqft": 165,
+                "m2": 15.329
+            },
+            "name": "Bedroom"
+        },
+        {
+            "size": {
+                "sqft": 165,
+                "m2": 15.329
+            },
+            "name": "Bedroom"
+        },
+        {
+            "size": {
+                "sqft": 180,
+                "m2": 16.7
+            },
+            "name": "Main Bedroom"
+        }
+    ],
+    "levels": 3,
+    "asking_price": 729000,
+    "price_history": [
+        {
+            "date": {
+                "$date": "2019-09-01T00:00:00Z"
+            },
+            "price": 536000
+        },
+        {
+            "date": {
+                "$date": "2012-05-05T00:00:00Z"
+            },
+            "price": 387000
+        },
+        {
+            "date": {
+                "$date": "1990-02-23T00:00:00Z"
+            },
+            "price": 250000
+        }
+    ],
+    "heating": "Forced Air",
+    "cooling": null
+}

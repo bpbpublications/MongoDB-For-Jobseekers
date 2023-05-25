@@ -1,0 +1,35 @@
+[
+    {
+        "$addFields": {
+            "search_title": {
+                "$toLower": "$title"
+            }
+        }
+    },
+    {
+        "$addFields": {
+            "search_words": {
+                "$split": [
+                    "$search_title",
+                    " "
+                ]
+            }
+        }
+    },
+    {
+        "$match": {
+            "search_words": "tacos"
+        }
+    },
+    {
+        "$sort": {
+            "search_title": 1
+        }
+    },
+    {
+        "$project": {
+            "_id": 0,
+            "title": 1
+        }
+    }
+]
