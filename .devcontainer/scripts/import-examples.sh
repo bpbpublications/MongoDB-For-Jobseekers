@@ -1,0 +1,1 @@
+mongoimport --db=website --jsonArray /workspace/collections/cookbook.json

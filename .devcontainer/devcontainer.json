@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.233.0/containers/php-mariadb
+// Update the VARIANT arg in docker-compose.yml to pick a PHP version
+{
+    "name": "MongoDB for Jobseekers",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {},
+            "extensions": [
+                "GitHub.github-vscode-theme",
+                "brapifra.phpserver",
+                "xdebug.php-debug",
+                "bmewburn.vscode-intelephense-client",
+                "mrmlnc.vscode-apache",
+                "mongodb.mongodb-vscode",
+                "ms-python.python",
+                "golang.Go"
+            ]
+        }
+    },
+    // For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
+    "forwardPorts": [
+        8080,
+        27017
+    ],
+    "onCreateCommand": "echo PS1='\"🌮 \\W $ \"' >> ~/.bashrc", //Set Terminal Prompt
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "/bin/bash ./.devcontainer/scripts/post-create.sh",
+    // "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
+    // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
+}
