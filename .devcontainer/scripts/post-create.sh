@@ -10,9 +10,6 @@ ln -s /workspace/extras/.mongoshrc.js ~/.mongoshrc.js
 mongosh --eval "disableTelemetry()"
 mongosh --eval "db.disableFreeMonitoring()"
 
-# install drivers
-/bin/bash /workspace/.devcontainer/scripts/mongodb-go-drivers.sh
-
 # import example data
 /bin/bash /workspace/.devcontainer/scripts/import-examples.sh
 

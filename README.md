@@ -24,3 +24,11 @@ Upon completing this book, you will acquire the necessary confidence and experti
 •  Learn about MongoDB's high availability and scalability features.
 
 •  Explore integration with programming languages and frameworks.
+
+### Resources and References
+The book and this repo reference a number of different resources which can be found below.
+
+- [https://github.com/learnmongo/playground](https://github.com/learnmongo/playground)
+- [https://github.com/learnmongo/mongoquest](https://github.com/learnmongo/mongoquest)
+- [https://mongoquest.com](https://mongoquest.com)
+- [https://learnmongo.com](https://learnmongo.com))
