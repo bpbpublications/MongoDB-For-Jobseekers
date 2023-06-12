@@ -1,0 +1,3 @@
+# Chapter 7: Complex Data, Made Simple
+
+MongoDB’s document model allows us to store much more complex data than legacy databases, by using arrays and embedded documents. These data types give us a lot of flexibility, but with flexibility can come complexity. Fortunately, the MongoDB Query API provides robust tools for dealing with these complex types. By the end of this chapter, you should have a solid understanding of how to perform typical queries to find and modify arrays as well as embedded objects. Additionally, you will have a high-level understanding of the many MongoDB operators available for these data types, and how to use them.

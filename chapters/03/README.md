@@ -1,4 +1,6 @@
-#Getting Started
+# Chapter 3: Getting Started
+
+In this chapter, we will cover installing MongoDB Server on various different operating systems, as well as Docker and MongoDB’s Cloud service Atlas. Additionally, we will walk through installing the MongoDB Shell, Tools and the official GUI MongoDB Compass.
 
 ## Installing MongoDB
 

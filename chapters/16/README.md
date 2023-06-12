@@ -1,0 +1,3 @@
+# Chapter 16: Cloud Services – MongoDB Atlas
+
+This chapter will only briefly cover a couple of the key aspects of the cloud services offered by MongoDB Atlas, as indeed, a whole book in itself could be written about Atlas. With that said, after reading this chapter, you should have a solid understanding of what Atlas has to offer and how you can use it to leverage the power of MongoDB even further. Atlas has essentially three main categories of features, two of which we will talk about in this chapter: cloud hosting services and database tools, such as Search and Charts. In the next chapter, we will discuss the third category, Atlas Application Services.
